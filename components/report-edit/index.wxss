@@ -1,0 +1,3 @@
+.report-edit-wrap{
+  height: calc(100vh - 134rpx);
+}

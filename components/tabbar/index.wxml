@@ -1,0 +1,6 @@
+<!--components/tabbar/index.wxml-->
+<view class='tabbar-wrap'>
+  <image wx:for="{{ normalSrcs }}" wx:key="index" class='tab-icon {{selectedIndex === index ? "is-selected" : ""}}'
+    src="{{selectedIndex === index ? selectedSrcs[index] : item}}" bindtap="tabTap" data-tab-index="{{index}}">
+  </image>
+</view>

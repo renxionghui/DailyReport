@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#409eff",
+    "navigationBarTitleText": "日报编辑",
+    "navigationBarTextStyle":"white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

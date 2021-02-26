@@ -1,0 +1,38 @@
+<view class='personal-panel-wrap'>
+  <view class='user-info-wrap' bindtap="hanleLogin">
+    <view class='text-info-wrap'>
+      <view class='nick-name-wrap'>
+        <text >{{ nickName }}</text>
+      </view>
+      <view class='info-progress-wrap'>
+        <view>
+          <text style='color:#9399C9;font-size:32rpx;line-height:48rpx'>信息完成度</text>
+        </view>
+        <view class='progress-wrap'>
+          <van-progress show-pivot='{{false}}' percentage="50" stroke-width="8" color='#FF8273'/>
+        </view>     
+      </view>
+    </view>
+    <view class='avatar-wrap'>
+      <image class='avatar-icon' src='{{avatarUrl}}'></image>
+    </view>
+  </view>
+
+  <view class='user-detail-wrap'>
+    <view class='user-detail-title'>
+      <text>个人信息</text>
+    </view>
+    <view class="user-detail-panel">
+      <image class='detail-icon' src='./images/name.svg'></image>
+      <text class='detail-text'>XXX</text>
+    </view>
+    <view class="user-detail-panel">
+      <image class='detail-icon' src='./images/phone.svg'></image>
+      <text class='detail-text'>1380000000</text>
+    </view>
+    <view class="user-detail-panel">
+      <image class='detail-icon' src='./images/department.svg'></image>
+      <text class='detail-text'>xxx部门</text>
+    </view>
+  </view>
+</view>

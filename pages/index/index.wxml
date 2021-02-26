@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='main-wrap'>
+    <van-transition custom-class="main-panel" show="{{ tabIndex == 0 }}" name='slide-left'>
+      <report-list></report-list>
+    </van-transition>
+    <van-transition custom-class="main-panel" show="{{ tabIndex == 1 }}">
+      <report-edit></report-edit>
+    </van-transition>
+    <van-transition custom-class="main-panel" show="{{ tabIndex == 2 }}" name='slide-right'>
+      <personal-panel></personal-panel>
+    </van-transition>
+  </view>
+  <tabbar bind:tabchange='onTabChange'></tabbar>
+</view>

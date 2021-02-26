@@ -1,0 +1,5 @@
+.report-list-wrap{
+  height: calc(100vh - 134rpx);
+  overflow: scroll;
+  border-radius: 12rpx;
+}

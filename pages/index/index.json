@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tabbar":"/components/tabbar",
+    "report-list":"/components/report-list",
+    "report-edit":"/components/report-edit",
+    "personal-panel":"/components/personal-panel",
+    "van-transition": "@vant/weapp/transition/index"
+  }
+}
