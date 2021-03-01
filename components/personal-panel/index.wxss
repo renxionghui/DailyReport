@@ -23,6 +23,17 @@
   font-weight: 900;
   margin: 12rpx;
 }
+.login-button{
+  color:#7B81BE;
+  background-color: #fff;
+  padding: 0;
+  display: inline;
+  font-size: 40rpx;
+}
+.login-button::after{
+  border: none;
+  outline: none;
+}
 
 .info-progress-wrap{
   margin-left: 12rpx;

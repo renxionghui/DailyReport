@@ -3,25 +3,42 @@ Component({
   properties: {},
 
   data: {
-    nickName:'点击登陆',
-    avatarUrl:'./images/avatar.svg'
+    nickName: '点击登陆',
+    avatarUrl: './images/avatar.svg'
   },
-  lifetimes:{
-    created(){
+  lifetimes: {
+    created() {
+      console.log('created')
       const that = this;
       wx.getUserInfo({
         success(res) {
-          const { userInfo : { nickName, avatarUrl } } = res
+          console.log(res)
+          const {
+            userInfo: {
+              nickName,
+              avatarUrl
+            }
+          } = res
           that.setData({
-            nickName, avatarUrl
+            nickName,
+            avatarUrl
           })
         }
       })
     }
   },
   methods: {
-    hanleLogin(){
-      console.log('1111')
+    getUserInfo(res) {
+      const {
+        userInfo: {
+          nickName,
+          avatarUrl
+        }
+      } = res.detail
+      this.setData({
+        nickName,
+        avatarUrl
+      })
     }
   }
 })

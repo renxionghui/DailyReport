@@ -1,8 +1,8 @@
 <view class='personal-panel-wrap'>
-  <view class='user-info-wrap' bindtap="hanleLogin">
+  <view class='user-info-wrap'>
     <view class='text-info-wrap'>
       <view class='nick-name-wrap'>
-        <text >{{ nickName }}</text>
+        <button class="login-button" open-type='getUserInfo'  bindgetuserinfo="getUserInfo">{{ nickName }}</button>
       </view>
       <view class='info-progress-wrap'>
         <view>
