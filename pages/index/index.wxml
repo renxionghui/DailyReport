@@ -1,13 +1,16 @@
 <!--index.wxml-->
 <view class="container">
   <view class='main-wrap'>
-    <van-transition custom-class="main-panel" show="{{ tabIndex == 0 }}" name='slide-left'>
+    <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
+      show="{{ tabIndex == 0 }}">
       <report-list></report-list>
     </van-transition>
-    <van-transition custom-class="main-panel" show="{{ tabIndex == 1 }}">
+    <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
+      show="{{ tabIndex == 1 }}">
       <report-edit></report-edit>
     </van-transition>
-    <van-transition custom-class="main-panel" show="{{ tabIndex == 2 }}" name='slide-right'>
+    <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
+      show="{{ tabIndex == 2 }}">
       <personal-panel></personal-panel>
     </van-transition>
   </view>

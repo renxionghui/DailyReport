@@ -1,23 +1,25 @@
-// components/report-list/index.js
+const primaryReportList = new Array(66)
+const secondaryReportList = new Array(22)
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
 
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-
+    date:'',
+    primaryCount:66,
+    secondaryCount:22,
+    reportCount:66,
+    primaryReportList:primaryReportList,
+    secondaryReportList:secondaryReportList
   },
-
-  /**
-   * 组件的方法列表
-   */
+  
   methods: {
-
+    handleSwiperChange(e){
+      const currentIndex = e.detail.current;
+      const reportCount = currentIndex === 0 ? this.data.primaryCount : this.data.secondaryCount;
+      this.setData({
+        reportCount
+      })
+    }
   }
 })

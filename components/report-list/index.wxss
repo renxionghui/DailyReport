@@ -1,5 +1,131 @@
 .report-list-wrap{
   height: calc(100vh - 134rpx);
-  overflow: scroll;
   border-radius: 12rpx;
+}
+
+.list-title{
+  text-align: center;
+  position: relative;
+}
+
+.title-text{
+  font-weight: 500;
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.title-detail{
+  font-size: 24rpx;
+  color: #eee;
+  margin: 12rpx;
+}
+
+.title-detail .detail-text{
+  margin:0 24rpx;
+}
+
+.list-swiper-wrap{
+  height: calc(100% - 120rpx);
+  position: relative;
+}
+
+.list-swiper{
+  height: 100%
+}
+
+.report-primary-wrap{
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  margin: 0 6rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.report-list{
+  height: 100%;
+  overflow-y:scroll;
+  position: relative;
+  z-index: 2;
+}
+
+.report-secondary-wrap{
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  margin: 0 6rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.blur-wrap::after{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  border-radius: 48rpx;
+  background-image: linear-gradient(90deg,rgba(255, 255, 255, .2),rgba(255, 2555, 255, .3),rgba(255, 255, 255, .2));
+}
+
+.report-count{
+  font-weight: 700;
+  font-size: 36rpx;
+  line-height: 112rpx;
+  color: #fff;
+  margin: 12rpx 0;
+  width: 112rpx;
+  height: 112rpx;
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+  top: -64rpx;
+  left: -4rpx;
+}
+
+.report-count .count-text{
+  position: relative;
+  z-index: 2;
+}
+.report-count::before{
+  content: '';
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  top: 16rpx;
+  left: 16rpx;
+  background: #3c2efd;
+  transform: rotate(45deg);
+  border-radius: 24rpx;
+  box-shadow: 0 0 5px #fff;
+}
+
+.report-item{
+  color: #fff;
+  display: flex;
+  margin: 24rpx;
+}
+
+.report-item-order{
+  width: 48rpx;
+  height: 48rpx;
+  padding: 8rpx;
+  font-size: 32rpx;
+  /* background-color: #409eff; */
+  text-align: center;
+  line-height: 48rpx;
+  background-image: linear-gradient(45deg,#409eff,#3c3efd,#409eff);
+  border-radius: 12rpx;
+  margin-right: 12rpx;
+}
+
+.report-item-title{
+  flex-grow: 1;
+  height: 48rpx;
+  background-image: linear-gradient(45deg,#409eff,#3c6efd,#409eff);
+  border-radius: 12rpx;
+  line-height: 48rpx;
+  font-size: 32rpx;
+  padding: 8rpx 24rpx;
 }

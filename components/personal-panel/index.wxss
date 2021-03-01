@@ -9,7 +9,7 @@
   background-color: #fff;
   border-radius: 36rpx 36rpx 96rpx 96rpx;
   justify-content: space-between;
-  box-shadow: -2rpx -2rpx 6rpx #fff,2rpx 2rpx 6rpx #999;
+  box-shadow: -2rpx -2rpx 6rpx inset #fff,2rpx 2rpx 6rpx inset #999;
 }
 
 .text-info-wrap{

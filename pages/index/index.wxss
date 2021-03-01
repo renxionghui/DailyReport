@@ -24,3 +24,15 @@
   height: 100%;
 }
 
+/* 切换动画 */
+.panel-enter-active-class,
+.panel-leave-active-class {
+  transition-property: background-color, transform;
+}
+
+.panel-enter-class,
+.panel-leave-to-class {
+  background-color: red;
+  transform: rotate(-360deg) translate3d(-100%, -100%, 0);
+}
+

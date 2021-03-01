@@ -1,3 +1,47 @@
 <view class='report-list-wrap'>
-  日报列表
+  <view class="list-title">
+    <view class='title-text'>
+      <text>{{ date }}日报汇总</text>
+    </view>
+    <view class='title-detail'>
+      <text class='detail-text'>主要任务：{{primaryCount}}</text>
+      <text class='detail-text'>次要任务：{{secondaryCount}}</text>
+    </view>
+  </view>
+  <view class='list-swiper-wrap'>
+    <swiper class='list-swiper' previous-margin='24rpx' next-margin='24rpx' bindchange='handleSwiperChange'>
+      <swiper-item>
+        <view class='report-primary-wrap blur-wrap'>
+          <view class='report-list'>
+            <view class='report-item' wx:for="{{ primaryReportList }}" wx:key='index'>
+              <view class='report-item-order'>
+                <text >{{ index+1 }}</text>
+              </view>
+              <view class='report-item-title'>
+                <text>主要任务</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='report-secondary-wrap blur-wrap'>
+          <view class='report-list'>
+            <view class='report-item' wx:for="{{ secondaryReportList }}" wx:key='index'>
+              <view class='report-item-order'>
+                <text >{{ index+1 }}</text>
+              </view>
+              <view class='report-item-title'>
+                <text>次要任务</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class='report-count'>
+      <text class="count-text">{{reportCount}}</text>
+    </view>
+  </view>
+
 </view>
