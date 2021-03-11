@@ -1,15 +1,20 @@
 .personal-panel-wrap{
-  height: calc(100vh - 134rpx);
+  height: 100%;
+  overflow: auto;
+  --primary-text:#7B81BE;
+  --secondary-text:#878787;
+  --nickname-border:#FF8273;
+  --cell-background-color:transparent;
 }
-
+/* 个人姓名,头像等面板 */
 .user-info-wrap{
   display: flex;
-  padding: 24rpx 48rpx 48rpx;
-  margin: 32rpx 24rpx;
-  background-color: #fff;
-  border-radius: 36rpx 36rpx 96rpx 96rpx;
+  padding: 48rpx;
+  margin:48rpx 32rpx;
+  background-color: var(--box-bg-color);
+  border-radius: 48rpx;
   justify-content: space-between;
-  box-shadow: -2rpx -2rpx 6rpx inset #fff,2rpx 2rpx 6rpx inset #999;
+  box-shadow: -3px -3px 10px #fff, 3px 3px 10px #B8C1CD;
 }
 
 .text-info-wrap{
@@ -19,13 +24,14 @@
 
 .nick-name-wrap{
   font-size: 40rpx;
-  color:#7B81BE;
+  color:var(--primary-text);
   font-weight: 900;
-  margin: 12rpx;
+  margin:0 12rpx;
+  height: 96rpx;
 }
 .login-button{
-  color:#7B81BE;
-  background-color: #fff;
+  color:var(--primary-text);
+  background-color: transparent;
   padding: 0;
   display: inline;
   font-size: 40rpx;
@@ -47,25 +53,28 @@
   width: 160rpx;
   height: 160rpx;
   border-radius: 50%;
-  border:12rpx solid #FF8273;
+  border:12rpx solid var(--nickname-border);
 }
 
+/* 个人详细信息面板 */
 .user-detail-wrap{
-  padding: 24rpx;
-  margin-top: 32rpx;
+  padding:12rpx 48rpx 36rpx;
+  margin: 32rpx;
+  border-radius: 48rpx;
+  background-color: var(--box-bg-color);
+  box-shadow: -3px -3px 10px #fff, 3px 3px 10px #B8C1CD;
 }
 
 .user-detail-title{
-  color:#fff;
+  color:var(--primary-text);
   font-size: 32rpx;
   font-weight: 500;
+  margin: 32rpx 0 16rpx;
 }
 
 .user-detail-panel{
-  height: 96rpx;
-  padding: 16rpx;
-  background-color: #ECF0F3;
-  margin: 48rpx;
+  padding: 20rpx;
+  background-color: var(--box-bg-color);
   display: flex;
   align-items: center;
   border-radius: 222rpx;
@@ -74,15 +83,32 @@
 }
 
 .detail-icon{
-  width: 64rpx;
-  height: 64rpx;
-  padding: 16rpx;
-  background-color: #ECF0F3;
-  box-shadow: 2rpx 2rpx 10px #fff,-2rpx -2rpx 10px #fff;
+  width: 40rpx;
+  height: 40rpx;
+  padding: 20rpx;
+  background-color: var(--box-bg-color);
+  box-shadow: 4rpx 4rpx 10px #999,-4rpx -4rpx 10px #fff;
   border-radius: 50%;
 }
 
 .detail-text{
   margin-left: 24rpx;
-  color: #7B81BE;
+  color: var(--secondary-text);
+}
+
+.user-detail-save{
+  margin-top: 72rpx;
+  height: 112rpx;
+  border-radius: 64rpx;
+  background-color:var(--box-bg-color);
+  box-shadow: -3px -3px 10px #fff, 3px 3px 10px #B8C1CD;
+  color: var(--primary-text);
+  font-size: 36rpx;
+  font-weight: 800;
+  text-align: center;
+  line-height: 112rpx;
+}
+.save-hover{
+  box-shadow:inset -2px -2px 5px #fff,inset 2px 2px 5px #B8C1CD;
+  background-color:var(--main-bg-color);
 }

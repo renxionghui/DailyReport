@@ -1,1 +1,20 @@
- 
+ page {
+   --main-bg-color: #DCE0E3;
+   --box-bg-color: #ECF0F3;
+   --primary-color: #409eff;
+   --tab-normal-color: #A8A8A8;
+ }
+
+ .flex-center-items {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .outside-shadow {
+   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #B8C1CD;
+ }
+
+ .inside-shadow {
+   box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #B8C1CD;
+ }

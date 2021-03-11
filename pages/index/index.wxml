@@ -1,18 +1,21 @@
 <!--index.wxml-->
 <view class="container">
   <view class='main-wrap'>
-    <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
-      show="{{ tabIndex == 0 }}">
+    <report-list wx:if="{{tabIndex == 0}}"></report-list>
+    <report-edit wx:elif="{{tabIndex == 1}}"></report-edit>
+    <personal-panel wx:else></personal-panel>
+    <!-- <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
+      wx:if="{{ tabIndex == 0 }}">
       <report-list></report-list>
     </van-transition>
     <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
-      show="{{ tabIndex == 1 }}">
+      wx:elif="{{ tabIndex == 1 }}">
       <report-edit></report-edit>
     </van-transition>
     <van-transition duration="{{ { enter: 500, leave: 500 } }}" custom-class="main-panel"
-      show="{{ tabIndex == 2 }}">
+      wx:else>
       <personal-panel></personal-panel>
-    </van-transition>
+    </van-transition> -->
   </view>
   <tabbar bind:tabchange='onTabChange'></tabbar>
 </view>

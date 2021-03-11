@@ -2,15 +2,15 @@
   <view class='user-info-wrap'>
     <view class='text-info-wrap'>
       <view class='nick-name-wrap'>
-        <button class="login-button" open-type='getUserInfo'  bindgetuserinfo="getUserInfo">{{ nickName }}</button>
+        <button class="login-button" open-type='getUserInfo' bindgetuserinfo="getUserInfo">{{ nickName }}</button>
       </view>
       <view class='info-progress-wrap'>
         <view>
           <text style='color:#9399C9;font-size:32rpx;line-height:48rpx'>信息完成度</text>
         </view>
         <view class='progress-wrap'>
-          <van-progress show-pivot='{{false}}' percentage="50" stroke-width="8" color='#FF8273'/>
-        </view>     
+          <van-progress show-pivot='{{false}}' percentage="{{percentage}}" stroke-width="6" color='#FF8273' track-color='#fff' />
+        </view>
       </view>
     </view>
     <view class='avatar-wrap'>
@@ -19,20 +19,38 @@
   </view>
 
   <view class='user-detail-wrap'>
-    <view class='user-detail-title'>
-      <text>个人信息</text>
+    <view>
+      <view class='user-detail-title'>
+        <text>姓名</text>
+      </view>
+      <view class="user-detail-panel">
+        <image class='detail-icon' src='./images/name.svg'></image>
+        <van-field value="{{ name }}" placeholder="请输入姓名" border="{{ false }}" bindchange='handleNameChange'/>
+      </view>
     </view>
-    <view class="user-detail-panel">
-      <image class='detail-icon' src='./images/name.svg'></image>
-      <text class='detail-text'>XXX</text>
+
+    <view>
+      <view class='user-detail-title'>
+        <text>电话</text>
+      </view>
+      <view class="user-detail-panel">
+        <image class='detail-icon' src='./images/phone.svg'></image>
+        <van-field value="{{ phone }}" type='number' placeholder="请输入电话" border="{{ false }}" bindchange='handlePhoneChange'/>
+      </view>
+
     </view>
-    <view class="user-detail-panel">
-      <image class='detail-icon' src='./images/phone.svg'></image>
-      <text class='detail-text'>1380000000</text>
+    <view>
+      <view class='user-detail-title'>
+        <text>部门</text>
+      </view>
+      <view class="user-detail-panel">
+        <image class='detail-icon' src='./images/department.svg'></image>
+        <van-field value="{{ department }}" placeholder="请输入部门" border="{{ false }}" bindchange='handleDepartmentChange'/>
+      </view>
     </view>
-    <view class="user-detail-panel">
-      <image class='detail-icon' src='./images/department.svg'></image>
-      <text class='detail-text'>xxx部门</text>
+
+    <view class='user-detail-save' hover-class="save-hover" bindtap="handleSave">
+      保存
     </view>
   </view>
 </view>
