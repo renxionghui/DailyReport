@@ -1,8 +1,8 @@
 .personal-panel-wrap{
   height: 100%;
   overflow: auto;
-  --primary-text:#7B81BE;
-  --secondary-text:#878787;
+  --primary-text:#6B92E5;
+  --secondary-text:#7B81BE;
   --nickname-border:#FF8273;
   --cell-background-color:transparent;
 }
@@ -45,6 +45,9 @@
   margin-left: 12rpx;
 }
 
+.progress-text{
+  color: var(--secondary-text);
+}
 .progress-wrap{
   margin-top: 12rpx;
 }

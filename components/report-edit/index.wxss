@@ -1,8 +1,8 @@
 .report-edit-wrap {
   height: 100%;
   position: relative;
-  --primary-text: #7B81BE;
-  --secondary-text: #6B92E5;
+  --primary-text: #6B92E5;
+  --secondary-text: #7B81BE;
   --cell-background-color: transparent;
   --delete-icon-size: 36rpx;
   --report-icon-size: 64rpx;
@@ -49,7 +49,8 @@
 }
 /* 主要任务 */
 .bg-primary-grap {
-  background-image: linear-gradient(#7B81BE, #C3CFED);
+  
+  background-image: linear-gradient(#507ED5, #C3CFED);
 }
 
 .color-primary {
@@ -58,7 +59,7 @@
 
 /* 次要任务 */
 .bg-secondary-grap {
-  background-image: linear-gradient(#507ED5, #C3CFED);
+  background-image: linear-gradient(#7B81BE, #C3CFED);
 }
 
 .color-secondary {

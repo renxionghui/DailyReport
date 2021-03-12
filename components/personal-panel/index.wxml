@@ -6,7 +6,7 @@
       </view>
       <view class='info-progress-wrap'>
         <view>
-          <text style='color:#9399C9;font-size:32rpx;line-height:48rpx'>信息完成度</text>
+          <text class='progress-text'>信息完成度</text>
         </view>
         <view class='progress-wrap'>
           <van-progress show-pivot='{{false}}' percentage="{{percentage}}" stroke-width="6" color='#FF8273' track-color='#fff' />
