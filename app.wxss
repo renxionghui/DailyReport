@@ -18,3 +18,12 @@
  .inside-shadow {
    box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #B8C1CD;
  }
+
+ .button-normal {
+   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #999;
+ }
+
+ .button-hover {
+   background-color: var(--main-bg-color);
+   box-shadow: inset -1px -1px 3px #fff, inset 1px 1px 3px #999;
+ }

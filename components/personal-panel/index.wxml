@@ -49,7 +49,7 @@
       </view>
     </view>
 
-    <view class='user-detail-save' hover-class="save-hover" bindtap="handleSave">
+    <view class='user-detail-save' hover-class="save-hover" bindtap="handleSave" hover-stay-time="250">
       保存
     </view>
   </view>

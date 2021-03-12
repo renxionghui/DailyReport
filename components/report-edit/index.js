@@ -1,28 +1,31 @@
 Component({
+  options:{
+    addGlobalClass: true
+  },
   properties: {},
   data: {
     currentIndex:0,
-    primaryReport:[],
-    secondaryReport:[],
+    primaryReport:[{content:''}],
+    secondaryReport:[{content:''}],
   },
   methods: {
-    handlePlus(){
-      switch(this.data.currentIndex){
-        case 0:
-          this.data.primaryReport.push({content:""})
-          this.setData({
-            primaryReport:this.data.primaryReport,
-          })
-          break;
-        case 1:
-          this.data.secondaryReport.push({content:""})
-          this.setData({
-            secondaryReport:this.data.secondaryReport,
-          })
-          break;
-        default:
-          break;
-      }
+    handlePrimaryPlus(){
+      this.data.primaryReport.push({content:""})
+      this.setData({
+        primaryReport:this.data.primaryReport,
+      })
+    },
+    handlePrimarySubmit(){
+      console.log('提交主要任务')
+    },
+    handleSecondaryPlus(){
+      this.data.secondaryReport.push({content:""})
+      this.setData({
+        secondaryReport:this.data.secondaryReport,
+      })
+    },
+    handleSecondarySubmit(){
+      console.log('提交次要任务')
     },
     handleMinus(e){
       const itemIndex = e.currentTarget.dataset.itemIndex;
@@ -52,9 +55,6 @@ Component({
       const value = e.detail;
       const itemIndex = e.currentTarget.dataset.itemIndex
       this.data.secondaryReport[itemIndex].content = value
-    },
-    handleSubmit(){
-      console.log('提交')
     },
     handleSwiperChange(e){
       const currentIndex = e.detail.current;

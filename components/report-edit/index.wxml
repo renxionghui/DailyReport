@@ -1,51 +1,90 @@
 <view class='report-edit-wrap'>
   <view class='report-edit-swiper'>
-    <swiper class='swiper-wrap' previous-margin='12rpx' next-margin='12rpx' bindchange='handleSwiperChange'>
+    <swiper class='swiper-wrap' bindchange='handleSwiperChange'>
       <swiper-item>
         <view class='edit-swiper-item blur-wrap'>
-          <view class='edit-swiper-title'>
-            <text>主要任务</text>
+          <view class='edit-swiper-title outside-shadow'>
+            <text class='title-text color-primary'>主</text>
+            <view class='title-grap bg-primary-grap'></view>
+            <text class='title-text color-primary'>要</text>
+            <view class='title-grap bg-primary-grap'></view>
+            <text class='title-text color-primary'>任</text>
+            <view class='title-grap bg-primary-grap'></view>
+            <text class='title-text color-primary'>务</text>
           </view>
           <view class='report-edit-list'>
             <view class='edit-panel' wx:for="{{primaryReport}}" wx:key='index'>
-              <view class='edit-panel-title'>
-                <text>{{index+1}}</text>
-                <view bindtap="handleMinus" data-item-index='{{index}}'>
-                  <text>X</text>
+              <view class='panel-content outside-shadow'>
+                <view class='panel-index inside-shadow'>
+                  <text class='panel-index-text color-primary'>{{index+1}}</text>
+                </view>
+                <view class='panel-textarea inside-shadow'>
+                  <van-field bind:change='handlePrimaryItemChange' data-item-index='{{index}}'
+                    value="{{ item.content }}" label="" type="textarea" placeholder="请输入主要任务内容" autosize clearable
+                    custom-style='height:80px' border="{{ false }}" />
                 </view>
               </view>
-              <view class='edit-panel-content'>
-                <van-field bind:change='handlePrimaryItemChange' data-item-index='{{index}}' value="{{ item.content }}" label="" type="textarea" placeholder="请输入主要任务" autosize clearable border="{{ false }}" />
+              <view class='panel-delete button-normal' hover-class="button-hover" hover-stay-time="250">
+                <image class='panel-delete-icon' src='./images/icon-delete-primary.svg'></image>
               </view>
             </view>
           </view>
+
+          <view class='report-edit-buttons'>
+            <view class='report-button-wrap button-normal' hover-class='button-hover' hover-stay-time="250"
+              bindtap="handlePrimarySubmit">
+              <image class='report-button-icon' src="./images/edit-submit-primary.svg"></image>
+            </view>
+            <view class='report-button-wrap button-normal' hover-class='button-hover' hover-stay-time="250"
+              bindtap="handlePrimaryPlus">
+              <image class='report-button-icon' src="./images/edit-plus-primary.svg"></image>
+            </view>
+          </view>
+
         </view>
       </swiper-item>
       <swiper-item>
         <view class='edit-swiper-item blur-wrap'>
-          <view class='edit-swiper-title'>
-            <text>次要任务</text>
+          <view class='edit-swiper-title outside-shadow'>
+            <text class='title-text color-secondary'>次</text>
+            <view class='title-grap bg-secondary-grap'></view>
+            <text class='title-text color-secondary'>要</text>
+            <view class='title-grap bg-secondary-grap'></view>
+            <text class='title-text color-secondary'>任</text>
+            <view class='title-grap bg-secondary-grap'></view>
+            <text class='title-text color-secondary'>务</text>
           </view>
           <view class='report-edit-list'>
             <view class='edit-panel' wx:for="{{secondaryReport}}" wx:key='index'>
-              <view class='edit-panel-title'>
-                <text>{{index+1}}</text>
-                <view bindtap="handleMinus" data-item-index='{{index}}'>
-                  <text>X</text>
+              <view class='panel-content outside-shadow'>
+                <view class='panel-index inside-shadow'>
+                  <text class='panel-index-text color-secondary'>{{index+1}}</text>
+                </view>
+                <view class='panel-textarea inside-shadow'>
+                  <van-field bind:change='handleSecondaryItemChange' data-item-index='{{index}}'
+                    value="{{ item.content }}" label="" type="textarea" placeholder="请输入次要任务内容" autosize clearable
+                    custom-style='height:80px' border="{{ false }}" />
                 </view>
               </view>
-              <view class='edit-panel-content'>
-                <van-field bind:change='handleSecondaryItemChange' data-item-index='{{index}}' value="{{ item.content }}" label="" type="textarea" placeholder="请输入次要任务" autosize clearable
-                  border="{{ false }}" />
+              <view class='panel-delete button-normal' hover-class="button-hover" hover-stay-time="250">
+                <image class='panel-delete-icon' src='./images/icon-delete-secondary.svg'></image>
               </view>
+            </view>
+          </view>
+
+          <view class='report-edit-buttons'>
+            <view class='report-button-wrap button-normal' hover-class='button-hover' hover-stay-time="250"
+              bindtap="handleSecondarySubmit">
+              <image class='report-button-icon' src="./images/edit-submit-secondary.svg"></image>
+            </view>
+            <view class='report-button-wrap button-normal' hover-class='button-hover' hover-stay-time="250"
+              bindtap="handleSecondaryPlus">
+              <image class='report-button-icon' src="./images/edit-plus-secondary.svg"></image>
             </view>
           </view>
         </view>
       </swiper-item>
     </swiper>
   </view>
-  <view class='report-add' hover-class='report-add-hover' hover-stay-time="300" bindtap="handlePlus">
-  </view>
-  <view class='report-submit' hover-class='report-submit-hover' hover-stay-time="300" bindtap="handleSubmit">
-  </view>
+
 </view>
