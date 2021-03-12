@@ -1,8 +1,6 @@
 .personal-panel-wrap{
   height: 100%;
   overflow: auto;
-  --primary-text:#6B92E5;
-  --secondary-text:#7B81BE;
   --nickname-border:#FF8273;
   --cell-background-color:transparent;
 }
@@ -92,11 +90,6 @@
   background-color: var(--box-bg-color);
   box-shadow: 4rpx 4rpx 10px #999,-4rpx -4rpx 10px #fff;
   border-radius: 50%;
-}
-
-.detail-text{
-  margin-left: 24rpx;
-  color: var(--secondary-text);
 }
 
 .user-detail-save{

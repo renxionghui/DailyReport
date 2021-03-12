@@ -25,7 +25,7 @@
       </view>
       <view class="user-detail-panel">
         <image class='detail-icon' src='./images/name.svg'></image>
-        <van-field value="{{ name }}" placeholder="请输入姓名" border="{{ false }}" bindchange='handleNameChange'/>
+        <van-field value="{{ name }}" placeholder="请输入姓名" border="{{ false }}" bindchange='handleNameChange' style='flex-grow:1'/>
       </view>
     </view>
 
@@ -35,7 +35,7 @@
       </view>
       <view class="user-detail-panel">
         <image class='detail-icon' src='./images/phone.svg'></image>
-        <van-field value="{{ phone }}" type='number' placeholder="请输入电话" border="{{ false }}" bindchange='handlePhoneChange'/>
+        <van-field value="{{ phone }}" type='number' placeholder="请输入电话" border="{{ false }}" bindchange='handlePhoneChange' style='flex-grow:1'/>
       </view>
 
     </view>
@@ -45,7 +45,7 @@
       </view>
       <view class="user-detail-panel">
         <image class='detail-icon' src='./images/department.svg'></image>
-        <van-field value="{{ department }}" placeholder="请输入部门" border="{{ false }}" bindchange='handleDepartmentChange'/>
+        <van-field value="{{ department }}" placeholder="请输入部门" border="{{ false }}" bindchange='handleDepartmentChange' style='flex-grow:1'/>
       </view>
     </view>
 

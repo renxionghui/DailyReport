@@ -1,7 +1,8 @@
  page {
    --main-bg-color: #DCE0E3;
    --box-bg-color: #ECF0F3;
-   --primary-color: #409eff;
+   --primary-text: #6B92E5;
+   --secondary-text: #7B81BE;
    --tab-normal-color: #A8A8A8;
  }
 

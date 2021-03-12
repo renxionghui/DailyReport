@@ -1,8 +1,6 @@
 .report-edit-wrap {
   height: 100%;
   position: relative;
-  --primary-text: #6B92E5;
-  --secondary-text: #7B81BE;
   --cell-background-color: transparent;
   --delete-icon-size: 36rpx;
   --report-icon-size: 64rpx;
