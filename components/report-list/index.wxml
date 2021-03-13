@@ -9,7 +9,7 @@
     </view>
   </view>
   <view class='list-swiper-wrap'>
-    <swiper class='list-swiper' previous-margin='24rpx' next-margin='24rpx' bindchange='handleSwiperChange'>
+    <swiper class='list-swiper' previous-margin='8rpx' next-margin='8rpx' bindchange='handleSwiperChange'>
       <swiper-item>
         <view class='report-primary-wrap blur-wrap'>
           <view class='report-list'>

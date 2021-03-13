@@ -4,6 +4,8 @@
    --primary-text: #6B92E5;
    --secondary-text: #7B81BE;
    --tab-normal-color: #A8A8A8;
+   --outside-shadow:-2px -2px 5px #fff, 2px 2px 5px #B8C1CD;
+   --inside-shadow:inset -2px -2px 5px #fff, inset 2px 2px 5px #B8C1CD;
  }
 
  .flex-center-items {
@@ -13,11 +15,11 @@
  }
 
  .outside-shadow {
-   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #B8C1CD;
+   box-shadow:var(--outside-shadow)
  }
 
  .inside-shadow {
-   box-shadow: inset -2px -2px 5px #fff, inset 2px 2px 5px #B8C1CD;
+   box-shadow: var(--inside-shadow)
  }
 
  .button-normal {
