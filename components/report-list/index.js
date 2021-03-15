@@ -9,6 +9,7 @@ Component({
     primaryCount:66,
     secondaryCount:22,
     reportCount:66,
+    reportCountColor:'#6B92E5',
     primaryReportList:primaryReportList,
     secondaryReportList:secondaryReportList
   },
@@ -16,9 +17,13 @@ Component({
   methods: {
     handleSwiperChange(e){
       const currentIndex = e.detail.current;
-      const reportCount = currentIndex === 0 ? this.data.primaryCount : this.data.secondaryCount;
+      const reportCount = currentIndex === 0 ? this.data.primaryCount : this.
+      data.secondaryCount;
+
+      const reportCountColor = currentIndex === 0 ? '#6B92E5' : '#7B81BE'
       this.setData({
-        reportCount
+        reportCount,
+        reportCountColor
       })
     }
   }

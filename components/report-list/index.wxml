@@ -13,9 +13,8 @@
       <swiper-item>
         <view class='report-primary-wrap blur-wrap'>
           <view class='report-list'>
-            <view class='report-item' wx:for="{{ primaryReportList }}" wx:key='index'>
-              <view class='report-item-order'>
-                <text >{{ index+1 }}</text>
+            <view class='report-item primary-item' wx:for="{{ primaryReportList }}" wx:key='index'>
+              <view class='report-item-order primary-order'>
               </view>
               <view class='report-item-title'>
                 <text>主要任务</text>
@@ -27,9 +26,8 @@
       <swiper-item>
         <view class='report-secondary-wrap blur-wrap'>
           <view class='report-list'>
-            <view class='report-item' wx:for="{{ secondaryReportList }}" wx:key='index'>
-              <view class='report-item-order'>
-                <text >{{ index+1 }}</text>
+            <view class='report-item secondary-item' wx:for="{{ secondaryReportList }}" wx:key='index'>
+              <view class='report-item-order secondary-order'>
               </view>
               <view class='report-item-title'>
                 <text>次要任务</text>
@@ -40,7 +38,7 @@
       </swiper-item>
     </swiper>
     <view class='report-count'>
-      <text class="count-text">{{reportCount}}</text>
+      <text class="count-text" style='color:{{reportCountColor}};'>{{reportCount}}</text>
     </view>
   </view>
 

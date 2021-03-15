@@ -5,7 +5,7 @@
 .list-title{
   text-align: center;
   position: relative;
-  background-color: var(--primary-text); 
+  background-color: var(--primary-color); 
   padding: 24rpx;
 }
 
@@ -40,7 +40,7 @@
   height: 100%;
   background-color: transparent;
   position: relative;
-  padding: 16rpx;
+  padding: 24rpx 16rpx;
   box-sizing: border-box;
 }
 
@@ -55,7 +55,7 @@
   height: 100%;
   background-color: transparent;
   position: relative;
-  margin: 0 6rpx;
+  padding: 24rpx 16rpx;
   box-sizing: border-box;
 }
 
@@ -88,7 +88,7 @@
 .report-count .count-text{
   position: relative;
   z-index: 2;
-  color: var(--primary-text);
+  color: var(--primary-color);
 }
 .report-count::before{
   content: '';
@@ -99,29 +99,47 @@
   left: 16rpx;
   background-color: var(--box-bg-color);
   transform: rotate(45deg);
-  border-radius: 24rpx;
+  /* border-radius: 24rpx; */
   box-shadow: var(--inside-shadow);
 }
 
 .report-item{
-  color: var(--primary-text);
   display: flex;
   margin: 24rpx;
-  align-items: center;
+}
+
+.primary-item{
+  color: var(--primary-color);
+}
+
+.secondary-item{
+  color: var(--secondary-color);
 }
 
 .report-item-order{
-  width: 48rpx;
-  height: 48rpx;
+  width: 24rpx;
+  height: 24rpx;
   padding: 8rpx;
-  font-size: 32rpx;
-  /* background-color: #409eff; */
-  text-align: center;
-  line-height: 48rpx;
   background-color: var(--box-bg-color);
-  box-shadow: var(--outside-shadow);
-  border-radius: 50%;
-  margin:0 12rpx;
+  box-shadow: var(--inside-shadow);
+  border-radius: 6rpx;
+  margin:4rpx 8rpx 0 0;
+}
+
+.primary-order::after {
+  content:'';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color:var(--primary-color);
+}
+
+.secondary-order::after {
+  content:'';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color:var(--secondary-color);
 }
 
 .report-item-title{
@@ -130,7 +148,7 @@
   line-height: 96rpx;
   margin-left: 12rpx;
   background-color: var(--box-bg-color);
-  box-shadow: var(--outside-shadow);
+  box-shadow: var(--inside-shadow);
   border-radius: 12rpx;
   line-height: 48rpx;
   font-size: 32rpx;

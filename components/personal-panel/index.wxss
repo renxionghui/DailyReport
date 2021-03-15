@@ -22,13 +22,13 @@
 
 .nick-name-wrap{
   font-size: 40rpx;
-  color:var(--primary-text);
+  color:var(--primary-color);
   font-weight: 900;
   margin:0 12rpx;
   height: 96rpx;
 }
 .login-button{
-  color:var(--primary-text);
+  color:var(--primary-color);
   background-color: transparent;
   padding: 0;
   display: inline;
@@ -44,7 +44,7 @@
 }
 
 .progress-text{
-  color: var(--secondary-text);
+  color: var(--secondary-color);
 }
 .progress-wrap{
   margin-top: 12rpx;
@@ -67,7 +67,7 @@
 }
 
 .user-detail-title{
-  color:var(--primary-text);
+  color:var(--primary-color);
   font-size: 32rpx;
   font-weight: 500;
   margin: 32rpx 0 16rpx;
@@ -98,7 +98,7 @@
   border-radius: 64rpx;
   background-color:var(--box-bg-color);
   box-shadow: -3px -3px 10px #fff, 3px 3px 10px #B8C1CD;
-  color: var(--primary-text);
+  color: var(--primary-color);
   font-size: 36rpx;
   font-weight: 800;
   text-align: center;
